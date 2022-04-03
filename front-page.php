@@ -186,7 +186,13 @@
             ?>
             <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
 
-            <li class="topblogItems__item topBlogBox"><a href="<?php the_permalink(); ?>">
+            <li class="topblogItems__item topBlogBox <?php $days = 7;
+            $today = date_i18n('U');
+            $entry_day = get_the_time('U');
+            $keika = date('U',($today - $entry_day)) / 86400;
+            if ( $days > $keika ):
+                echo 'topBlogBox--new';
+            endif; ?>"><a href="<?php the_permalink(); ?>">
               <div class="topBlogBox__img"><?php if (has_post_thumbnail()): ?>
                   <?php the_post_thumbnail('post-thumbnail', array('alt' => the_title_attribute('echo=0'))); ?>
               <?php else: ?>

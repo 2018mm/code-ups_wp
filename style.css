@@ -2569,17 +2569,11 @@ input.wpcf7-not-valid, textarea.wpcf7-not-valid, select.wpcf7-not-valid {
   margin-right: 0;
 }
 }
-.subBlogCard:first-child {
+.subBlogCard--new {
   position: relative;
 }
-@media screen and (min-width: 768px) {
-    .subBlogCard:first-child {
-        position: static;
-        justify-content: flex-start;
-      }
-}
 
-.subBlogCard:first-child::after {
+.subBlogCard--new::after {
   position: absolute;
   top: -15px;
   top: -0.9375rem;
@@ -2608,7 +2602,7 @@ input.wpcf7-not-valid, textarea.wpcf7-not-valid, select.wpcf7-not-valid {
   z-index: 3;
 }
 @media screen and (min-width: 768px) {
-  .subBlogCard:first-child::after {
+  .subBlogCard--new::after {
     display: none;
   }
 }
@@ -3634,11 +3628,11 @@ input.wpcf7-not-valid, textarea.wpcf7-not-valid, select.wpcf7-not-valid {
   margin-right: 0;
 }
 
-.topBlogBox:first-child {
+.topBlogBox--new {
   position: relative;
 }
 
-.topBlogBox:first-child::after {
+.topBlogBox--new::after {
   position: absolute;
   top: -15px;
   top: -0.9375rem;

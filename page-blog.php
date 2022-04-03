@@ -49,12 +49,12 @@ get_header(); ?>
                 while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
             <li class="subBlogCards__item subBlogCard <?php $days = 7;
-$today = date_i18n('U');
-$entry_day = get_the_time('U');
-$keika = date('U',($today - $entry_day)) / 86400;
-if ( $days > $keika ):
-    echo 'subBlogCard--new';
-endif; ?>"><a href="<?php the_permalink(); ?>">
+                $today = date_i18n('U');
+                $entry_day = get_the_time('U');
+                $keika = date('U',($today - $entry_day)) / 86400;
+                if ( $days > $keika ):
+                    echo 'subBlogCard--new';
+                endif; ?>"><a href="<?php the_permalink(); ?>">
                 <div class="subBlogCard__img">
                 <?php if (has_post_thumbnail()): ?>
                   <?php the_post_thumbnail('post-thumbnail', array('alt' => the_title_attribute('echo=0'))); ?>
